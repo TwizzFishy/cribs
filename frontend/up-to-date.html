@@ -1,0 +1,116 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cribs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+å        .card {
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buttons .like {
+            background-color: #28a745;
+            color: white;
+        }
+        .buttons .dislike {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="cribsLOGO.png" alt="Logo" width="100">
+    </header>
+     <!-- Card display section -->
+    <div class="card" id="profileCard">
+        <img src="app test.png" alt="Apartment" id="cardImage">
+        <div class="card-content">
+            <h2 id="cardTitle">1 Bed, 1 Bath</h2>
+            <p id="cardDescription">Pet Friendly | No Smoking | Near You</p>
+        </div>
+    </div>
+    <!-- Interaction buttons -->
+    <div class="buttons">
+        <button class="dislike" onclick="handleDislike()">Dislike</button>
+        <button class="like" onclick="handleLike()">Like</button>
+    </div>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        let currentCardIndex = 0;
+        const cards = [
+            { title: '1 Bed, 1 Bath', description: 'Pet Friendly | No Smoking | Near You', image: 'app test.png' },
+            { title: '2 Bed, 2 Bath', description: 'Near Downtown | Gym | Pet Friendly', image: 'App 2.png' },
+            { title: '3 Bed, 2 Bath', description: 'Spacious | View | Family Friendly', image: 'App 3.png' }
+        ];
+
+        function showNextCard() {
+            currentCardIndex = (currentCardIndex + 1) % cards.length;
+            const nextCard = cards[currentCardIndex];
+
+            document.getElementById('cardImage').src = nextCard.image;
+            document.getElementById('cardTitle').textContent = nextCard.title;
+            document.getElementById('cardDescription').textContent = nextCard.description;
+        }
+
+        function handleLike() {
+            alert("You liked the profile!");
+            showNextCard(); // Move to the next card
+        }
+
+        function handleDislike() {
+            alert("You disliked the profile!");
+            showNextCard(); // Move to the next card
+        }
+    </script>
+<body>
+    <footer>
+        <a href="#home"><img src="cribsLOGO.png" alt="Home" width="50"></a>
+        <a href="#spacer"><img src="Spacer.png" alt="Spacer" width="50"></a>
+        <a href="#message"><img src="message .png" alt="Message" width="45"></a>
+        <a href="#spacer"><img src="Spacer.png" alt="Spacer" width="50"></a>
+        <a href="#matches"><img src="Profile.png" alt="Matches" width="60"></a>
+    </footer>
+</body>
+</body>
+</html>
