@@ -86,12 +86,12 @@ Browse through potential renters’ profiles.
 Swipe right on renters who meet your criteria.
 Begin communicating with matches to finalize rental agreements.
 
-## ROADMAP:
+## ROADMAP
 Photo ID Verification: Planned feature to enhance user trust and security.
 Enhanced Search and Filtering: Customizable options to improve property and renter discovery.
 Improved Rating System: Advanced features for better feedback and ratings management.
 
-Contribution Guidelines
+## Contribution Guidelines
 We welcome contributions from the community! Here's how to get started:
 
 Fork the repository.
@@ -108,7 +108,7 @@ bash
 Copy code
 git push origin feature/your-feature-name
 Open a pull request for review.
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Thank you for using CRIBS! Happy renting and matching! 🎉
